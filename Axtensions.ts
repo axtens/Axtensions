@@ -1,31 +1,29 @@
-class Axtensions {
-    constructor() { }
+var Axtensions = function () { }
 
-    /**
-     * String before left
-     * @param  {string} temp
-     * @param  {string} left
-     * @param  {boolean=false} including
-     */
-    before(temp: string, left: string, including: boolean = false): string {
-        const i = temp.indexOf(left);
-        return -1 === i ? temp : temp.substring(0, i + (including ? 1 : 0));
-    }
-    /**
-     * String between begin and end, optionally caseless
-     * @param  {string} temp
-     * @param  {string} begin
-     * @param  {string} end
-     * @param  {boolean=false} including
-     */
-    between(temp: string, begin: string, end: string, including: boolean = false): string {
-        let left = temp.indexOf(begin);
-        if (left < 0)
-            return '';
-        left += begin.length;
-        const right = end === void 0 ? temp.length : temp.indexOf(end, left);
-        if (right < 0)
-            return '';
-        return including ? begin + temp.substring(left, right) + end : temp.substring(left, right);
-    }
+/**
+ * String before left
+ * @param  {string} temp
+ * @param  {string} left
+ * @param  {boolean=false} including
+ */
+Axtensions.prototype.before = function (temp: string, left: string, including: boolean = false): string {
+    const i = temp.indexOf(left);
+    return -1 === i ? temp : temp.substring(0, i + (including ? 1 : 0));
+}
+/**
+ * String between begin and end, optionally caseless
+ * @param  {string} temp
+ * @param  {string} begin
+ * @param  {string} end
+ * @param  {boolean=false} including
+ */
+Axtensions.prototype.between = function (temp: string, begin: string, end: string, including: boolean = false): string {
+    let left = temp.indexOf(begin);
+    if (left < 0)
+        return '';
+    left += begin.length;
+    const right = end === void 0 ? temp.length : temp.indexOf(end, left);
+    if (right < 0)
+        return '';
+    return including ? begin + temp.substring(left, right) + end : temp.substring(left, right);
 }
