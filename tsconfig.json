@@ -1,0 +1,21 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "target": "es2016",
+        "lib": ["ESNext"],
+        "strict": false,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "types": ["google-apps-script", ".\\types"],
+        "removeComments": true
+    },
+    "include": [
+        "*.ts",
+        "String\\*.ts",
+        "Number\\*.ts",
+        "Array\\*.ts",
+        "Date\\*.ts"
+    ]
+}

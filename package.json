@@ -1,0 +1,15 @@
+{
+  "name": "axtensions",
+  "version": "1.0.0",
+  "description": "Assorted GAS tools",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GAS"
+  ],
+  "author": "Bruce M. Axtens",
+  "license": "ISC"
+}
