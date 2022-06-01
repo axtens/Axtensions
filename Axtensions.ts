@@ -1,12 +1,10 @@
-var Axtensions = function () { }
-
 /**
  * String before left
  * @param  {string} temp
  * @param  {string} left
  * @param  {boolean=false} including
  */
-Axtensions.prototype.before = function (temp: string, left: string, including: boolean = false): string {
+function before(temp: string, left: string, including: boolean = false): string {
     const i = temp.indexOf(left);
     return -1 === i ? temp : temp.substring(0, i + (including ? 1 : 0));
 }
@@ -17,7 +15,7 @@ Axtensions.prototype.before = function (temp: string, left: string, including: b
  * @param  {string} end
  * @param  {boolean=false} including
  */
-Axtensions.prototype.between = function (temp: string, begin: string, end: string, including: boolean = false): string {
+function between(temp: string, begin: string, end: string, including: boolean = false): string {
     let left = temp.indexOf(begin);
     if (left < 0)
         return '';
